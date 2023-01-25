@@ -1,0 +1,232 @@
+<form class="form form--activate-tv" id="activate-tv__form" autocomplete="off">
+
+  <div class="title-container">
+    <h2 class="activate-tv__title title">ACTIVAR  </h2>
+    <input type="text" disabled class="activate-tv__value" name="activateTvNumber" id="activateTvNumber" value="">
+  </div>
+
+  <div class="inputs-container">
+    <div class="activate-tv__tiempo">
+      <h3 class="activate-tv__subtitle subtitle">TIEMPO</h3>
+      <div class="activate-tv__timmer">
+        <select
+          class="activate-tv__select select activate-tv__select--hours"
+          name="activateTvHours"
+          id="form-hours"
+        >
+          <option value="">00</option>
+          <option value="1">1h</option>
+          <option value="2">2h</option>
+          <option value="3">3h</option>
+          <option value="4">4h</option>
+          <option value="5">5h</option>
+          <option value="6">6h</option>
+          <option value="7">7h</option>
+          <option value="8">8h</option>
+          <option value="unlimited" style="font-size: 10px">
+            Libre
+          </option>
+        </select>
+
+        <select
+          class="activate-tv__select select activate-tv__select--minutes"
+          name="activateTvMinutes"
+          id="form-minutes"
+        >
+          <option value="">00</option>
+          <option value="30 " style="font-size: 15px;">30m</option>
+          <option value="6" style="font-size: 15px;">6m</option>
+          <option value="5" style="font-size: 15px;">5m</option>
+          <option value="1" style="font-size: px;">1m</option>
+        </select>
+      </div>
+    </div>
+    <div class="text-fields">
+      <input
+        class="activate-tv__user user-input"
+        required
+        type="text"
+        name="activateTvUser"
+        placeholder="Usuario"
+        id="form-user"
+      />
+      <input
+        class="activate-tv__pass user-input"
+        required
+        type="password"
+        name="activateTvPass"
+        placeholder="Clave"
+        id="form-pass"
+      />
+    </div>
+
+  <div class="activate-tv__is-user">
+    <div
+      class="is-user__selector is-user__selector--si"
+      id="selector-si"
+    >
+      REGISTRADO
+    </div>
+    <div
+      class="is-user__selector is-user__selector--no"
+      id="selector-no"
+    >
+      NO REGISTRADO
+    </div>
+  </div>
+  </div>
+
+  <div class="button-container">
+      <button
+      class="activate-tv__button user-button"
+      id="activate-tv__button"
+      value="ACTIVAR"
+      >
+      ACTIVAR
+      </button>
+  </div>
+
+</form>
+
+<form action="" class="form --form client-update" id="client-update__form">
+
+  <div class="title-container"><h2 class="client-update__title title">RECARGAR</h2></div>
+  <div class="inputs-container">
+    
+    <div class="client-update__tiempo">
+      <h3 class="client-update__subtitle subtitle">TIEMPO</h3>
+      <select
+        class="client-update__select select client-update__select--hours"
+        name="hours"
+        id="client-update__hours"
+      >
+        <option value="0">00</option>
+        <option value="1">1h</option>
+        <option value="2">2h</option>
+        <option value="3">3h</option>
+        <option value="4">4h</option>
+        <option value="5">5h</option>
+        <option value="6">6h</option>
+        <option value="7">7h</option>
+        <option value="8">8h</option>
+      </select>
+    </div>
+    <div class="text-fields">
+      <input
+      class="client-update__user user-input"
+      required
+      type="text"
+      name="user"
+      placeholder="Usuario"
+      id="client-update__user"
+      autocomplete="off"
+    />
+    </div>
+    <div class="button-container">
+      <button
+        class="client-update__button user-button"
+        id="client-update__button"
+        value="RECARGAR"
+      >
+        RECARGAR
+      </button>
+    </div>
+  
+  </div>
+
+  
+
+
+</form>
+
+<form action="" class="form form--client-registration" id="client-registration__form">
+
+  <div class="title-container">
+    <h2 class="client-registration__title title">REGISTRAR</h2>
+  </div>
+
+  <div class="inputs-container">
+
+    <div class="text-fields">
+      
+      <input
+        class="client-registration__user user-input"
+        required
+        type="text"
+        name="user"
+        placeholder="Usuario"
+        id="client-registration__user"
+        autocomplete="off"
+      />
+      <input
+        class="client-registration__pass user-input"
+        required
+        type="password"
+        name="pass"
+        placeholder="Clave"
+        id="client-registration__pass"
+        autocomplete="off"
+      />
+      <input
+        class="client-registration__pass-repeat user-input"
+        required
+        type="password"
+        name="passRepeat"
+        placeholder="Repetir Clave"
+        id="client-registration__pass-repeat"
+        autocomplete="off"
+      />
+    </div>
+  </div>
+
+  <div class="button-container">
+
+    <button
+      class="client-registration__button user-button"
+      id="client-registration__button"
+      value="RECARGAR"
+    >
+      REGISTRAR
+    </button>
+
+  </div>
+
+  
+
+</form>
+
+<form action="" class="form form--client-check" id="client-check__form">
+
+
+  <div class="title-container">  <h2 class="client-registration__balance title">SALDO</h2></div>
+
+  
+  <div class="inputs-container">
+    <div class="text-fields">
+      <input
+      class="client-check__user user-input"
+      required
+      type="text"
+      name="user"
+      placeholder="Usuario"
+      id="client-check__user"
+      autocomplete="off"
+    />
+    </div>
+  </div>
+
+  <div class="button-container">
+    
+    <button
+      class="client-check__button user-button"
+      id="client-check__button"
+      value="ACTIVAR"
+    >
+      CONSULTAR
+    </button>
+  </div>
+</form>
+
+<table class="table history-table" id="history-table">
+
+</table>

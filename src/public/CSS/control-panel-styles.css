@@ -1,0 +1,440 @@
+body {
+    
+
+    --text-main-color: #ffffffd8;
+    --buttons-backgroundColor:  #232346;
+    --text-second-color: #b5c2ff;
+    --text-shadow: #232346;
+    --selector-active-color: var(--buttons-backgroundColor);
+    --selector-inactive-color: transparent;
+    --borders: #4748725d;
+    --table-borders:1px solid #4748722d;
+
+    --box-shadow-tables: 0px 0px 10px #11103d2f;
+    --box-shadow-forms: 0px 0px 10px #11103d69;
+    --box-shadow-tv-container: 0px 0px 10px #11103d59;
+    --box-shadow-nav: 0px 0px 10px #11103d2f;
+    --box-shadow-buttons: 0px 0px 10px #11103d2f;
+    --background-color : rgba(0, 0, 0, 0.829);
+    
+    --background-header: linear-gradient(to right, rgba(35, 35, 70, 0.7), rgba(0, 0, 0, 0.5));
+    --background-userNav: linear-gradient(to right, rgba(35, 35, 70, 0.1) , rgba(35, 35, 70, 0.308));
+    --background-nav: linear-gradient(0,transparent, rgba(255, 255, 255, 0.05),transparent);
+    --background-forms: linear-gradient(0,transparent, rgba(255, 255, 255, 0.05),transparent);
+    --background-tables: linear-gradient(0,transparent,rgba(255, 255, 255, 0.05),transparent);
+    --background-tv-container: linear-gradient(-90deg, transparent, rgba(223, 222, 189, 0.05));
+    --background-tv: linear-gradient(to bottom, #2323464b, #232346a8 50%, #232346c0);
+    --background-tvHover: linear-gradient(to bottom, #2323464b, #232346a8);
+
+
+    max-width: 100vw;
+    max-height: 100vh;
+    overflow: hidden;
+    /* background-color: rgb(17, 3, 3); */
+    background-image: url(./../images/fuji-mountain-with-milky-way-night_335224-104.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: unset;
+    display: grid;
+    grid-template-columns: 20% 53% 25%;
+    grid-template-rows: 15vh 85vh;
+}
+
+.title {
+
+    letter-spacing: 10px;
+    font-size: 3.5em;
+    font-family: 'Rubik Glitch', cursive;
+    color: var(--text-second-color);
+    text-shadow: 1px 2px 25px var(--text-shadow);
+    font-weight: lighter;
+    height: 3.5em;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.subtitle {
+    text-shadow: 1px 2px 25px var(--text-shadow);
+    font-weight: lighter;
+    font-size: 1.5em;
+    font-family: 'Rubik Glitch', cursive;
+    color: var(--text-main-color);
+    letter-spacing: 5px;
+    height: 2.5em;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+
+.activate-tv__is-user {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
+    gap: 1px;
+    border-radius: 10px;
+    color:black;
+    margin-top: 20px;
+}
+
+.is-user__selector {
+    font-family: monospace;
+    cursor: pointer;
+    height: 2em;
+    width: 10em;
+    font-size: 1.5em;
+    border: 1px solid var(--borders);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 85%;
+}
+
+.is-user__selector:hover {
+    opacity: 100%;
+}
+
+.is-user__selector--si {
+    background-color: var(--selector-active-color);
+    cursor: pointer;
+    border-radius: 10px 0 0 10px ;
+}
+
+.is-user__selector--no {
+    background-color: var(--selector-inactive-color);
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+.select {
+    /* desactivar la flecha */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 3em;
+    border-radius: 10px;
+    color: var(--text-main-color);
+    font-family: 'Rubik Glitch', cursive;
+    gap: 4px;
+
+    place-content: center;
+    border: 1px solid var(--borders);
+    background-color: rgba(0, 0, 0, 0.307);
+
+}
+
+
+.activate-tv__value {
+    font-weight: lighter;
+    box-shadow: 0 0 0 0 transparent;
+    font-family: 'Rubik Glitch', cursive;
+    text-align: center;
+    max-height: 10em;
+    max-width: 2em;
+    color: var(--text-main-color);
+    background-color: transparent;
+    font-size: 6em;
+    border: none;
+    display: grid;
+    
+
+}
+
+
+
+.client-update__tiempo{
+
+    display: flex;
+    flex-flow:column wrap;
+    justify-content: center;
+}
+
+.activate-tv__timmer {
+    display:flex;
+    justify-content: center;
+    gap: 2.5px;
+   
+}
+
+.client-update__subtitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.activate-tv__subtitle {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.text-fields{
+    display: grid;
+    place-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.user-input {
+    font-family: 'Rubik Glitch', cursive;
+    font-weight: 0;
+    letter-spacing: 5px;
+
+    height: 50px;
+    width: 50vh;
+    background-color: rgba(0, 0, 0, 0.307);
+    font-size: 3em;
+    border-radius: 6px;
+    color: #7C8C92;
+    box-shadow: var(--box-shadow-buttons);
+    border: 1px solid var(--borders);
+    padding: 20px;
+
+}
+
+
+
+select:focus,
+textarea:focus {
+    font-weight: 0;
+    background-color: rgb(0, 0, 0);
+    
+}
+
+
+
+.user-input:focus {
+    font-weight: 0;
+    outline: none;
+    letter-spacing: 5px;
+}
+
+.user-input::placeholder {
+    opacity: 70%;
+    font-weight: 0;
+    font-size: 0.8em;
+    color: var(--text-main-color);
+    letter-spacing: 5px;
+
+    
+}
+
+.user-button {
+
+    letter-spacing: 5px;
+    border-radius: 6px;
+    color: var(--text-main-color);
+    font-family: 'Rubik Glitch', cursive;
+    background-color: var(--buttons-backgroundColor);
+    font-size: 3em;
+    width: 50vh;
+    height: 10vh;
+    margin-top: 30px;
+}
+
+.button-container{
+    grid-row: 3/4;
+    display: grid;
+    place-content: center;
+}
+
+.user-button:hover {
+    opacity: 90%;
+}
+
+.main {
+    display: grid;
+    grid-template-columns: 60vw 40vw;
+    grid-template-rows: 1fr;
+}
+
+.control-panel {
+    margin-top: 50px;
+    grid-column: 2/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: center;
+}
+
+
+.form{
+    width: 70vh;
+    border: 1px solid var(--borders);
+    border-radius: 20px;
+    box-shadow: var(--box-shadow-forms);
+    background: var(--background-forms);
+    animation-name: show-form2;
+    animation-duration: 0.3s;
+    z-index: 1;
+    margin-bottom: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display:grid;
+    grid-template-columns: 1fr ;
+    background-color:var(--background-color);
+}
+
+
+.form--login{
+    
+   height: 60vh;
+    
+
+}
+.title-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.inputs-container{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+@keyframes show-form2 {
+    0% {
+        opacity: 50%;
+        transform: translateY(100vw);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.client-update__tiempo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.table{
+    text-transform: capitalize;
+    font-family: monospace;
+    padding:10px;
+    font-size: 1.8em;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+
+    border: var(--table-borders);
+    box-shadow: var(--box-shadow-tables);
+    border-collapse: collapse;
+    background: var(--background-tables);
+    margin-bottom: 30px;
+    border-radius: 50px;
+    animation-name: show-form2;
+    animation-duration: 0.3s;
+    z-index: 1;
+    background-color:var(--background-color);
+}
+
+
+
+.table__title{
+    letter-spacing: 10px;
+    font-weight: lighter;
+    font-size: 1.5em;
+    color:var(--text-second-color);
+    margin-bottom: 20px;
+    font-family: 'Rubik Glitch', cursive;
+}
+
+.table__row, .table__head{
+    width: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    opacity: 70%;
+    border-collapse: collapse;
+    background-color: #00000052;
+
+}
+.table__head{
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+    color: var(--text-main-color);
+    text-shadow: 0 0 4px var(--text-shadow);
+
+    background-color:var(--selector-active-color);
+    font-weight: lighter;
+    border: 1px solid black;
+    font-family: 'Rubik Glitch', cursive;
+}
+
+.table__row--even{
+    background-color: #ffffff0e;
+    
+}
+
+.table__data{
+    letter-spacing: 5px;
+    text-align: center;
+    color: var(--text-main-color);
+
+    width:100%;
+    display:grid;
+    place-content: center;
+    padding: 5px;
+}
+
+.table__row:hover {
+    opacity: 100%;
+}
+
+
+.table__row--total{
+    border-bottom: none;
+    background-color: rgba(245, 222, 179, 0);
+    height: 2em;
+    display: flex;
+    align-items: flex-end;
+    align-content: flex-end;
+    justify-content: flex-end;
+    font-family: 'Rubik Glitch', cursive;
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.table__data--total{
+    font-family: monospace;
+    background-color:var(--selector-active-color);
+    height: 2em;
+    letter-spacing: 5px;
+    color: rgba(202, 6, 6, 0.911);
+    font-weight: bolder;
+    font-size: 1.1em;
+    border-color: black;
+    text-shadow: 0 0 4px var(--text-shadow);
+}
+
+.table__data--date{
+    letter-spacing: 1px;
+
+}
+
+.table__data--timeActive{
+    color: red;
+}
+
+.table__data--tvNumber{
+    font-family: 'Rubik Glitch', cursive;
+    background-color:#232346 ;
+}

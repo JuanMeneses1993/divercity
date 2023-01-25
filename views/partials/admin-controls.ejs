@@ -1,0 +1,139 @@
+<!-- <form class="activate-tv__form" id="activate-tv__form" autocomplete="off">
+    <h2 class="activate-tv__title title">ACTIVAR EQUIPO</h2>
+
+    <div class="activate-tv__tvOptions">
+      <div class="activate-tv__number">
+        <h3 class="activate-tv__subtitle subtitle">Nº</h3>
+        <select
+          required="true"
+          name="activateTvNumber"
+          class="activate-tv__select select"
+          id="form-tvNumber"
+        >
+          <option id="activate-tv__option--0" value="">0</option>
+          <option id="activate-tv__option--1" value="1">1</option>
+          <option id="activate-tv__option--2" value="2">2</option>
+          <option id="activate-tv__option--3" value="3">3</option>
+          <option id="activate-tv__option--4" value="4">4</option>
+          <option id="activate-tv__option--5" value="5">5</option>
+          <option id="activate-tv__option--6" value="6">6</option>
+          <option id="activate-tv__option--7" value="7">7</option>
+          <option id="activate-tv__option--8" value="8">8</option>
+          <option id="activate-tv__option--9" value="9">9</option>
+          <option id="activate-tv__option--10" value="10">10</option>
+        </select>
+      </div>
+
+      <div class="activate-tv__tiempo">
+        <h3 class="activate-tv__subtitle subtitle">TIEMPO</h3>
+        <div class="activate-tv__timmer">
+          <select
+            class="activate-tv__select select activate-tv__select--hours"
+            name="activateTvHours"
+            id="form-hours"
+          >
+            <option value="">00</option>
+            <option value="1">1h</option>
+            <option value="2">2h</option>
+            <option value="3">3h</option>
+            <option value="4">4h</option>
+            <option value="5">5h</option>
+            <option value="6">6h</option>
+            <option value="7">7h</option>
+            <option value="8">8h</option>
+            <option value="unlimited" style="font-size: 20px">
+              Libre
+            </option>
+          </select>
+
+          <select
+            class="activate-tv__select select activate-tv__select--minutes"
+            name="activateTvMinutes"
+            id="form-minutes"
+          >
+            <option value="00">00</option>
+            <option value="30">30m</option>
+            <option value="6">6m</option>
+            <option value="5">5m</option>
+            <option value="1">1m</option>
+            <option value="0.5">0.1m</option>
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="activate-tv__is-user">
+      <div
+        class="is-user__selector is-user__selector--si"
+        id="selector-si"
+      >
+        REGISTRADO
+      </div>
+      <div
+        class="is-user__selector is-user__selector--no"
+        id="selector-no"
+      >
+        NO REGISTRADO
+      </div>
+    </div>
+
+    <input
+      class="activate-tv__user user-input"
+      required
+      type="text"
+      name="activateTvUser"
+      placeholder="Usuario"
+      id="form-user"
+    />
+    <input
+      class="activate-tv__pass user-input"
+      required
+      type="password"
+      name="activateTvPass"
+      placeholder="Clave"
+      id="form-pass"
+    />
+
+    <button
+      class="activate-tv__button user-button"
+      id="activate-tv__button"
+      value="ACTIVAR"
+    >
+      ACTIVAR
+    </button>
+</form> -->
+
+
+
+<form class="new-employee__form form" id="new-employee__form" autocomplete="off">
+  <div class="title-container"><h2 class="new-employee__title title">Agregar</h2></div>
+  
+  <div class="inputs-container">
+    <div class="text-fields">
+      <input class="user-input" type="text" name="user" placeholder="Nombre">
+      <input class="user-input" type="password" name="pass" placeholder="Clave">
+      <input class="user-input" type="password" name="passRepeat" placeholder="Repetir clave">
+    </div>
+  </div>
+  <div class="button-container">
+    <input type="submit" class="user-button" value="Agregar">
+
+  </div>
+</form>
+
+<form class="delete-employee__form form" id="delete-employee__form" autocomplete="off">
+  <div class="title-container"><h2 class="delete-employee__title title">Eliminar</h2></div>
+  <div class="inputs-container">
+    <div class="text-fields"><input type="text" name="user" class="user-input" placeholder="Nombre"></div>
+  </div>
+  <div class="button-container">
+    <input type="submit" class="user-button" value="Eliminar">
+
+  </div>
+</form>
+
+<table class="table table--statistics table" id="statistics">
+
+</table>
+
+<%- include('../partials/employee-controls') %>
