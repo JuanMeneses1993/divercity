@@ -20,6 +20,9 @@ const checkUserPass = async(req, res)=>{
 
         req.session.user = user;
         req.session.role = role;
+        
+        console.log(`Usuario logueado: ${user} Pass: ${pass} Role: ${role}`)
+
         res.send('ok')
 
     } catch (error) {

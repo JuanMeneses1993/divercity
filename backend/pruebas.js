@@ -38,7 +38,7 @@ const main = async()=>{
 
     const stats = await Promise.all(userNames.map(getStats))
 
-    console.log(stats);
+    console.log("stats: ", stats);
 };
 main()
 

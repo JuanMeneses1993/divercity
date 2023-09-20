@@ -1,0 +1,93 @@
+version: "3"
+services:
+
+  nginx:
+    image: 'jc21/nginx-proxy-manager:latest'
+    restart: unless-stopped
+    ports:
+      # These ports are in format <host-port>:<container-port>
+      - '8080:80' # Public HTTP Port
+      - '4430:443' # Public HTTPS Port
+      - '8181:81' # Admin Web Port
+      # Add any other Stream port you want to expose
+      # - '21:21' # FTP
+    environment:
+      DB_MYSQL_HOST: "db-nginx"
+      DB_MYSQL_PORT: 3306
+      DB_MYSQL_USER: ${NGINX_DBUSER}
+      DB_MYSQL_PASSWORD: ${NGINX_DBPASSWORD}
+      DB_MYSQL_NAME: ${NGINX_DBNAME}
+      # Uncomment this if IPv6 is not enabled on your host
+      # DISABLE_IPV6: 'true'
+    volumes:
+      - ./data-nginx:/data
+      - ./letsencrypt:/etc/letsencrypt
+    depends_on:
+      - db-nginx
+
+  db-nginx:
+    image: 'jc21/mariadb-aria:latest'
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${NGINX_DBPASSWORD}
+      MYSQL_DATABASE: ${NGINX_DBNAME}
+      MYSQL_USER: ${NGINX_DBUSER}
+      MYSQL_PASSWORD: ${NGINX_DBPASSWORD}
+    volumes:
+      - ./data-nginx/mysql:/var/lib/mysql
+
+  db-divercity:
+    image: mariadb:10.10.2-jammy
+    restart: always
+    environment:
+      MYSQL_USER: ${USER}
+      MYSQL_PASSWORD: ${PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${PASSWORD}
+      MYSQL_DATABASE: ${DATABASE}
+    volumes:
+      - ./db-divercity-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: 'db-divercity'
+      PMA_PORT: '3306'
+      PMA_USER: 'root'
+      PMA_PASSWORD: ${PMA_PASSWORD}
+    ports:
+      - "7070:80"
+    depends_on:
+      - db-divercity
+
+  divercity-app:
+    build: 
+      context: .
+    restart: always
+    ports:
+      - "4000:4000"
+    depends_on:
+      - db-divercity
+    volumes:
+      - ./backend:/app/backend/:rw
+      - ./views:/app/views:rw
+
+
+
+volumes:
+  backend:
+  views:
+  db-divercity-data:
+  data-nginx:
+  letsencrypt:
+  
+
+
+
+
+
+
+
+

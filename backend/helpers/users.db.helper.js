@@ -21,7 +21,6 @@ const consultUserPass = async(user, pass)=>{
     try {
         //formatear usuario(en minusculas y sin espacios ni saltos de linea)
 
-        console.log(user, pass);
 
         //consulta a la base de datos
         const connection = await getConnection();

@@ -1,11 +1,13 @@
 {
-    "name": "restapi-nodejs-express-mysql",
+    "name": "divercity",
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
     "scripts": {
         "babel-node": "babel-node --presets=@babel/preset-env",
-        "dev": "nodemon --exec npm run babel-node src/index.js"
+        "dbChecker": "nodemon --exec npm run babel-node backend/dbChecker/dbChecker.js",
+        "dev": "nodemon --exec npm run babel-node backend/index.js && dbChecker"
+
     },
     "keywords": [],
     "author": "",

@@ -1,3 +1,5 @@
 node_modules/
-
+data-nginx/
+database/
+db-divercity-data/
 .env

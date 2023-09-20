@@ -228,7 +228,7 @@ const getHistory = async ()=>{
                                 <td class = " table__head table__head--time">Hora</td>
                             </tr>`
         historyJson.forEach((historyRow, index) => {
-            console.log(historyRow)
+            console.log('historyrow:', historyRow)
             let evenOrOdd = 'odd';
             if (index%2 === 0){
                 evenOrOdd = 'even';

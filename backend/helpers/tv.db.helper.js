@@ -13,7 +13,6 @@ const resetTvs = async()=>{
     
 }
 
-
 const updateTimeEnlapsepTv = async(startTime, tvNumber)=>{
     try {
         
@@ -38,7 +37,7 @@ const updateTimeEnlapsepTv = async(startTime, tvNumber)=>{
             const result = await connection.query(`UPDATE tvs SET enlapsedTime = '${currentTimeEnlapsedMinutes}' WHERE tvNumber = '${tvNumberFormated}' `);
             //actualizar tiempo de usuario
             const totalToSubstract = Number(currentTimeEnlapsedMinutes) - Number(tvDbTimeEnlapsedMinutes)
-            console.log(totalToSubstract)
+            // console.log('totalsubstrack:', totalToSubstract)
             const tv = await getTv(tvNumber);
             await clientDbHelper.substractMinutesToClient(tv.currentUser, totalToSubstract, tv.tvNumber);
             return 'reset'
